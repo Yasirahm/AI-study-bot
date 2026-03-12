@@ -52,7 +52,7 @@ function StudyMode() {
   const generate = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/ai/study", {
+      const response = await axios.post("https://ai-bot-backend-kl9b.onrender.com/api/ai/study", {
         notes,
       });
       const cleanText = response.data.result.replace(/\*/g, "");
